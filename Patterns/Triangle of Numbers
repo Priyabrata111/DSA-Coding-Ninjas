@@ -1,0 +1,44 @@
+/*
+Print the following pattern for the given number of rows.
+Pattern for N = 4
+          1
+         232
+        34543
+       4567654
+       
+ */
+ 
+ #include <iostream>
+using namespace std;
+
+int main() {
+    /*  Read input as specified in the question.
+     * Print output as specified in the question.
+     */
+    int n;
+    cin>>n;
+    
+    for(int i=1;i<=n;i++)
+    {
+        int val =i;
+        int f=i;
+        
+        for(int j=n-i;j>=1;j--)
+            cout<<" ";
+        
+        
+        for(int k=1;k<=i;k++)
+        {
+            cout<<val;
+            val++;
+        }
+        val--;
+        for(int l=1;l<i;l++)
+        {val--;
+         cout<<val;
+        }
+        
+        cout<<endl;
+    }
+    
+}
